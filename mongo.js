@@ -25,7 +25,7 @@ if (process.argv.length === 5) {
     number: process.argv[4]
   })
 
-  person.save().then(result => {
+  person.save().then(() => {
     console.log('person saved!')
     mongoose.connection.close()
   })
@@ -34,6 +34,6 @@ if (process.argv.length === 5) {
     result.forEach(person => {
       console.log(person)
     })
-    mongoose.connection.close() 
+    mongoose.connection.close()
   })
 }
